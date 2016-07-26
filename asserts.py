@@ -42,7 +42,7 @@ def objective_function_of_the_porfolio_variance(w, assets):
             covariance += 2 * w[i] * w[j] * numpy.cov(assets[i].returns, assets[j].returns)[0][1]
     # print("Variance: ", portfolio_variance)
     # print("Covariance: ", covariance)
-    return portfolio_variance - covariance
+    return portfolio_variance + covariance
 
 
 def multi_object_function_to_minimize(w, assets):
